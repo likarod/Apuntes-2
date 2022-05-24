@@ -1,0 +1,165 @@
+/*
+
+1. Elementos principales (página). 
+1.1. Elementos principales del Formulario.
+2. Cuerpo de la página.
+3. Imágenes de la página.
+4. Footer 
+
+ */
+
+/* ---- 1. Elementos principales (Página). */
+
+html {
+    font-family : sans-serif;
+    background-color: rgb(122, 122, 121); 
+    margin-left: 19vw;
+    margin-right: 19vw;
+    cursor:ne-resize;
+}
+
+#gatitos{
+    background: url("../img/fondo.jpg") no-repeat;
+    background-size: cover;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    height: 200px;
+    color:wheat;
+    font-size: 70px; 
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 20px;
+}
+
+nav a, .menu, .info{
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    border-color: black;
+    background-color: rgb(81, 49, 110);
+    border-radius: 5px;
+}
+
+nav a:hover{
+    background-color:whitesmoke;
+    padding: 15px;
+}
+
+/* ---- 1.1. Elementos generales del Formulario. */
+.titulo11{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 70px; 
+    color:wheat;
+    margin-top: 50px;
+    text-align: center;
+}
+
+div, .botonFormulario, .error{
+    padding-block-start: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.error:before {
+    color: red;
+    content: '\0274c '; /* ❌ icon */
+  }
+
+/* ---- 2. Cuerpo de la página. */
+main{
+    height: 10%;
+    width: 90%;
+}
+
+.titulo1{
+    height: 50px;
+    width: 170px;
+    padding-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.art1, .art2{
+    margin: 50px;
+    padding-inline-start: 20%;
+    display: flex;
+    flex-direction: row;
+    align-self: baseline;
+}
+
+p{
+    text-align: justify;
+    padding-left: 5px;
+    line-height: 1.2;
+}
+
+.sub2{
+    margin-top: 20px;
+    padding-right: 40px;
+    padding-block-start: 20px;
+    font-size: large;
+    color: rgb(53, 11, 90);
+}
+
+
+/* ------ 3. Imágenes de la página. */
+
+.imagen1 {
+    height: auto;
+    width: 200px;
+}
+
+.imagen1:hover{
+    transform: scale(5);
+}
+
+figure{
+    display: flex;
+    flex-direction: column
+}
+
+figure img{
+    width: auto;
+    height: 200px;
+}
+
+figure, .imagen1{
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+   .art1, .art2 .titulo11 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+/* ----- 4. Footer */
+
+footer{
+    background-color: black;
+    height: 75px;
+    font-size: 15px; 
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+section a{
+    text-decoration: none;
+    padding: 10px;
+}

@@ -1,21 +1,17 @@
-const express = require('express');
-const news = require("./news");
-const bodyParser = require('body-parser');
-const app = express()
-const port = 3000
+var Express = require("express");
 
-//Middleware
-app.use("/", express.static("public"));
-app.use(bodyParser.urlencoded({extended: true}));
-// app.use(express.json());
+var app = Express();
 
-//RUTAS.
-app.get('/', news.getHome);
-app.get('/adios/', news.getadios)
-app.get('/quemas/:seccion?/:num_noticia?', news.getquemas)
-app.post("/crear", news.crearNoticias)
-//POST es enviar algo.
+app.get("/", (request, response) => {
+    response.status(200).send("Mi respuesta chachi");
+});
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.get("/test", (request, response) => {
+    response.status(500).send({ "message": "This is an error response" });
+});
+
+var server = app.listen(3000, () => {
+    console.log("Listening on port " + server.address().port + "...");
+});
+
+module.exports = server;

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba</title>
+    <link rel="stylesheet" href="css/mayerweb.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="shortcut icon" href="img/kuromiLogo.png" type="image/x-icon">
+    <script src="js/nuevo.js"></script>
+</head>
+<body>
+    
+    <header class="titulo11">Bienvenido a nuestro formulario de prueba.</header>
+    <nav>
+        <a href="#" class="menu">Menú.</a>
+        <a href="#" class="info">Sobre Nosotros.</a>
+
+    </nav>
+    <form action="#" method="post">
+        <fieldset id="ingreso" class="form">
+            <div>
+                <!-- ERROR a la hora de meterlo en un P sino mejor un DIV. -->
+                <label for="nombreUsuario">Nombre:</label><br>
+                <input type="name" name="name" placeholder="Introduce tu nombre" id="nombreUsuario" autofocus>
+                <!-- lo de meter el mismo FOR con el ID es para que se pueda clickar en el nombre -->
+            </div>
+            <div>
+                <label for="apellidoUsuario">Apellido:
+                </label><br>
+                <input type="valor" name= "lname" placeholder="Introduzca sus apellidos" id="apellidoUsuario" >
+            </div>
+            <br>
+            <a href="#" class="botonFormulario">ENVIAR</a>
+            <div class="error">Formulario no rellenado</div>
+        </fieldset>
+    
+    </form>
+</body>
+</html>
